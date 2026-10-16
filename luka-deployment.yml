@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: luka-nginx
+
+spec:
+  replicas: 3
+
+  selector:
+    matchLabels:
+      app: luka-nginx
+
+  template:
+    metadata:
+      labels:
+        app: luka-nginx
+
+    spec:
+      containers:
+        - name: luka-nginx
+          image: lukaj988/luka-nginx:latest
+          ports:
+            - containerPort: 80

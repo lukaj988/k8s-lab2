@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+
+metadata:
+  name: app-config
+
+data:
+  APP_NAME: "Luka DevOps Lab"
+  ENVIRONMENT: "dev"
+  VERSION: "2.0.0"
+
+
